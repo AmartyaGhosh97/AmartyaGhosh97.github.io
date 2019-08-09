@@ -1,0 +1,52 @@
+<html>
+<body>
+
+<?php
+$name = $_POST["name"];
+$email = $_POST["email"];
+$tel= $_POST["tel"];
+
+$myfile = fopen("$name.txt", "a+") or die("Unable to open file!");
+
+$fname = $_POST["fname"];
+$femail = $_POST["femail"];
+$ftel= $_POST["ftel"];
+
+$mname = $_POST["mname"];
+$memail = $_POST["memail"];
+$mtel= $_POST["mtel"];
+
+$gender = $_POST["gender"];
+$dob = $_POST["dob"];
+$cat= $_POST["cat"];
+$school=$_POST["school"];
+
+$username= $_POST["username"];
+$pword=$_POST["pword"];
+
+fwrite($myfile, $name);
+fwrite($myfile, $email);
+fwrite($myfile, $tel);
+
+fwrite($myfile, $fname);
+fwrite($myfile, $femail);
+fwrite($myfile, $ftel);
+
+fwrite($myfile, $mname);
+fwrite($myfile, $memail);
+fwrite($myfile, $mtel);
+
+
+fwrite($myfile, $gender);
+fwrite($myfile, $dob);
+fwrite($myfile, $cat);
+fwrite($myfile, $school);
+
+fwrite($myfile, $username);
+fwrite($myfile, $pword);
+
+fclose($myfile);
+?>
+
+</body>
+</html>
